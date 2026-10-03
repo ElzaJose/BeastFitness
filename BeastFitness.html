@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Beast Fitness | Gym in Kulathoor & Kazhakkoottam, Trivandrum</title>
+
+  <meta
+    name="description"
+    content="Beast Fitness located in Kulathoor and Kazhakkoottam, Thiruvananthapuram. Strength training, cardio, fitness and personal training."
+  />
+
+  <meta name="theme-color" content="#080808" />
+
+  <style>
+    :root {
+      --bg: #080808;
+      --bg-soft: #111111;
+      --card: #151515;
+      --text: #ffffff;
+      --muted: #a7a7a7;
+      --accent: #ff2200;
+      --accent-dark: #cc1b00;
+      --border: rgba(255, 255, 255, 0.09);
+
+      --container: 1180px;
+      --radius: 18px;
+      --radius-sm: 10px;
+
+      --space-section: 7rem;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body,
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: var(--space-section) 0;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+
+      color: var(--accent);
+
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+
+      margin-bottom: 0.9rem;
+    }
+
+    .section-label::before {
+      content: "";
+
+      width: 28px;
+      height: 2px;
+
+      background: var(--accent);
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      line-height: 0.98;
+
+      text-transform: uppercase;
+      letter-spacing: -0.05em;
+
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: 1rem;
+    }
+
+    /* =========================
+       HEADER & BRANDING
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(8, 8, 8, 0.94);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 1rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-container img.gym-logo {
+      height: 88px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .logo-container img.beast-fitness-img {
+      height: 72px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.7rem;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ddd;
+
+      font-size: 0.82rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      padding: 0.65rem 0.9rem;
+
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+
+      color: var(--accent);
+
+      font-size: 0.82rem;
+      font-weight: 900;
+
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+
+      border: 0;
+      background: transparent;
+
+      color: white;
+
+      font-size: 1.7rem;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 760px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.78) 42%,
+          rgba(0, 0, 0, 0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.1),
+          transparent 50%,
+          rgba(8, 8, 8, 1)
+        );
+
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+
+      padding: 6rem 0;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+
+      font-size: 0.84rem;
+      font-weight: 900;
+
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 8vw, 7rem);
+
+      line-height: 0.88;
+
+      text-transform: uppercase;
+      letter-spacing: -0.065em;
+
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-description {
+      max-width: 620px;
+
+      color: #d0d0d0;
+
+      font-size: clamp(1rem, 2vw, 1.2rem);
+
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.8rem;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0.85rem 1.4rem;
+
+      border: 1px solid transparent;
+      border-radius: 999px;
+
+      font-size: 0.84rem;
+      font-weight: 900;
+
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.35);
+
+      background: rgba(255, 255, 255, 0.04);
+
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================== */
+
+    .trust-bar {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 1.3rem 1rem;
+
+      text-align: center;
+
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+      font-size: 0.88rem;
+      font-weight: 900;
+
+      text-transform: uppercase;
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-item span {
+      display: block;
+
+      font-size: 1.3rem;
+
+      margin-bottom: 0.15rem;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      gap: 2rem;
+
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 1rem;
+    }
+
+    .service-card {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 1.7rem;
+
+      min-height: 280px;
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(255, 34, 0, 0.45);
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 14px;
+
+      background: rgba(255, 34, 0, 0.1);
+
+      color: var(--accent);
+
+      font-size: 1.6rem;
+
+      margin-bottom: 2rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+
+      text-transform: uppercase;
+
+      margin-bottom: 0.7rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+
+      font-size: 0.92rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--bg-soft);
+      position: relative;
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 4rem;
+
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 560px;
+
+      border-radius: var(--radius);
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=85")
+        center / cover no-repeat;
+
+      box-shadow: var(--shadow);
+    }
+
+    .about-copy p {
+      color: var(--muted);
+
+      margin-bottom: 1rem;
+
+      font-size: 1rem;
+    }
+
+    .about-points {
+      display: grid;
+
+      gap: 0.8rem;
+
+      margin: 2rem 0;
+
+      list-style: none;
+    }
+
+    .about-points li {
+      display: flex;
+
+      gap: 0.7rem;
+
+      align-items: center;
+
+      font-weight: 700;
+    }
+
+    .about-points li::before {
+      content: "✓";
+
+      width: 25px;
+      height: 25px;
+
+      display: grid;
+      place-items: center;
+
+      flex: 0 0 25px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      color: #fff;
+
+      font-weight: 900;
+    }
+
+    /* =========================
+       BRANCHES SECTION
+    ========================== */
+
+    .branches-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .branch-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      transition: border-color 0.25s ease;
+    }
+
+    .branch-card:hover {
+      border-color: rgba(255, 34, 0, 0.45);
+    }
+
+    .branch-badge {
+      display: inline-block;
+      background: rgba(255, 34, 0, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+    }
+
+    .branch-card h3 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .branch-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .branch-info-list {
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .branch-info-list div {
+      margin-bottom: 0.3rem;
+    }
+
+    .branch-info-list strong {
+      color: #fff;
+    }
+
+    /* =========================
+       GALLERY SECTION (HORIZONTALLY SCROLLABLE)
+    ========================== */
+
+    .gallery-filter {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .gallery-wrapper {
+      position: relative;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid var(--accent);
+      color: #fff;
+      font-size: 1.5rem;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .scroll-btn:hover {
+      background: var(--accent);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .scroll-btn.left {
+      left: -20px;
+    }
+
+    .scroll-btn.right {
+      right: -20px;
+    }
+
+    .gallery-slider {
+      display: flex;
+      gap: 1.2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.5rem 0 1.5rem 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) var(--card);
+    }
+
+    .gallery-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery-slider::-webkit-scrollbar-track {
+      background: var(--card);
+      border-radius: 4px;
+    }
+
+    .gallery-slider::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .gallery-item {
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item-video {
+      flex: 0 0 480px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item {
+        flex: 0 0 260px;
+      }
+      .gallery-item-video {
+        flex: 0 0 300px;
+        aspect-ratio: 4 / 3;
+      }
+      .scroll-btn {
+        display: none;
+      }
+    }
+
+    .gallery-item-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0,0,0,0) 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.2rem;
+      pointer-events: none;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay-badge {
+      font-size: 0.68rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .gallery-overlay-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    /* Lightbox Modal */
+    .gallery-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(10px);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .gallery-modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .modal-content img {
+      max-height: 75vh;
+      width: auto;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow);
+    }
+
+    .modal-caption {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .modal-caption h4 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .modal-caption p {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: transparent;
+      border: 0;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* =========================
+       TESTIMONIALS
+    ========================== */
+
+    .testimonials-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 1rem;
+
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 1.7rem;
+    }
+
+    .stars {
+      color: var(--accent);
+
+      letter-spacing: 0.15rem;
+
+      margin-bottom: 1.3rem;
+    }
+
+    .testimonial p {
+      color: #d5d5d5;
+
+      font-size: 0.95rem;
+
+      margin-bottom: 1.5rem;
+    }
+
+    .reviewer {
+      font-size: 0.85rem;
+      font-weight: 900;
+
+      text-transform: uppercase;
+    }
+
+    .reviewer span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 0.75rem;
+
+      font-weight: 500;
+
+      text-transform: none;
+
+      margin-top: 0.15rem;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(255, 34, 0, 0.08),
+          transparent 30%
+        ),
+        var(--bg-soft);
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: 0.85fr 1.15fr;
+
+      gap: 4rem;
+    }
+
+    .contact-details {
+      display: grid;
+
+      gap: 1.4rem;
+
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: grid;
+
+      grid-template-columns: 45px 1fr;
+
+      gap: 0.9rem;
+
+      align-items: start;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 10px;
+
+      background: rgba(255, 34, 0, 0.1);
+
+      color: var(--accent);
+    }
+
+    .contact-item strong {
+      display: block;
+
+      margin-bottom: 0.2rem;
+
+      font-size: 0.8rem;
+      font-weight: 900;
+
+      text-transform: uppercase;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      color: var(--muted);
+
+      font-size: 0.9rem;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    .hours {
+      display: grid;
+
+      gap: 0.35rem;
+
+      margin-top: 0.5rem;
+    }
+
+    .hours-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 1rem;
+
+      color: var(--muted);
+
+      font-size: 0.85rem;
+    }
+
+    .hours-row strong {
+      color: #fff;
+
+      margin: 0;
+
+      font-size: 0.85rem;
+
+      text-transform: none;
+    }
+
+    /* =========================
+       CONTACT FORM
+    ========================== */
+
+    .contact-form {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 2rem;
+    }
+
+    .contact-form h3 {
+      font-size: 1.4rem;
+
+      text-transform: uppercase;
+
+      margin-bottom: 1.5rem;
+    }
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: grid;
+
+      gap: 0.45rem;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: #ccc;
+
+      font-size: 0.75rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      border: 1px solid var(--border);
+
+      background: #0c0c0c;
+
+      color: white;
+
+      border-radius: var(--radius-sm);
+
+      padding: 0.85rem 1rem;
+
+      outline: none;
+
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--accent);
+    }
+
+    textarea {
+      min-height: 130px;
+
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+
+      margin-top: 1rem;
+    }
+
+    .form-note {
+      color: #777;
+
+      font-size: 0.75rem;
+
+      text-align: center;
+
+      margin-top: 0.8rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+
+      background: #050505;
+
+      padding: 2.5rem 0;
+    }
+
+    .footer-grid {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 2rem;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+
+      font-size: 0.8rem;
+
+      margin-top: 0.4rem;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 1.2rem;
+
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #aaa;
+
+      font-size: 0.8rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .socials {
+      display: flex;
+
+      gap: 0.6rem;
+    }
+
+    .social {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--border);
+
+      border-radius: 50%;
+
+      color: #aaa;
+
+      font-size: 0.75rem;
+
+      font-weight: 900;
+
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .social:hover {
+      border-color: var(--accent);
+
+      color: var(--accent);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+      }
+
+      .branches-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-phone {
+        display: none;
+      }
+
+      .nav-links {
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        padding: 1.2rem;
+
+        background: #0b0b0b;
+
+        border-bottom: 1px solid var(--border);
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links li:last-child {
+        border-bottom: 0;
+      }
+
+      .nav-links a {
+        display: block;
+
+        padding: 0.9rem 0;
+      }
+
+      .hero {
+        min-height: 680px;
+
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        padding: 5rem 0;
+      }
+
+      .services-header {
+        display: block;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      :root {
+        --space-section: 4.5rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 17vw, 5rem);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        font-size: 0.72rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .about-image {
+        min-height: 350px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+      }
+
+      .hours-row {
+        flex-direction: column;
+
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#home" class="logo-container">
+        <img src="BeastLogo.jpeg" alt="Beast Fitness Logo" class="gym-logo" />
+        <img src="beastfitness.png" alt="BEAST FITNESS" class="beast-fitness-img" />
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <nav aria-label="Main navigation">
+
+        <ul class="nav-links" id="navLinks">
+
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#branches">Locations</a>
+          </li>
+
+          <li>
+            <a href="#gallery">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#services">Services</a>
+          </li>
+
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#reviews">Reviews</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <a
+        class="nav-phone"
+        href="tel:+917012272476"
+        aria-label="Call Beast Fitness"
+      >
+        ☎ +91 70122 72476
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Beast Fitness • Kulathoor & Kazhakkoottam
+          </div>
+
+
+          <h1>
+            Train Hard.<br />
+            Get <span>Stronger.</span>
+          </h1>
+
+
+          <p class="hero-description">
+            Now serving you across two convenient locations in Kulathoor Arashmood and Kazhakkoottam
+            with quality equipment, supportive trainers, and goal-driven workout programs.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              href="tel:+917012272476"
+              class="btn btn-primary"
+            >
+              Call Now
+            </a>
+
+
+            <a
+              href="#contact"
+              class="btn btn-outline"
+            >
+              Send Enquiry
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TRUST BAR
+    ========================== -->
+
+    <section
+      class="trust-bar"
+      aria-label="Beast Fitness highlights"
+    >
+
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <span>★</span>
+          4.9 Rated
+        </div>
+
+
+        <div class="trust-item">
+          <span>2 Branches</span>
+          Kulathoor & Kazhakkoottam
+        </div>
+
+
+        <div class="trust-item">
+          <span>✓</span>
+          Supportive Trainers
+        </div>
+
+
+        <div class="trust-item">
+          <span>⚡</span>
+          Modern Equipment
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATIONS / BRANCHES
+    ========================== -->
+
+    <section class="section" id="branches">
+
+      <div class="container">
+
+        <div class="section-label">
+          Our Locations
+        </div>
+
+        <h2 class="section-title">
+          Two Branches,<br />One Beast Standard
+        </h2>
+
+        <p class="section-intro">
+          Choose the facility nearest to you. Both our Kulathoor Arashmood and Kazhakkoottam branches offer full strength, cardio, and personal training support.
+        </p>
+
+        <div class="branches-grid">
+
+          <div class="branch-card">
+            <span class="branch-badge">Kulathoor Arashmood</span>
+            <h3>Kulathoor Branch</h3>
+            <div class="branch-info-list">
+              <div><strong>Location:</strong> Near Arashmood, Kulathoor, Thiruvananthapuram, 695011</div>
+              <div><strong>Opening Hours:</strong> 5:00 AM – 11:00 AM & 4:00 PM – 10:00 PM</div>
+              <div><strong>Phone:</strong> +91 70122 72476</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="tel:+917012272476" class="btn btn-outline" style="padding: 0.5rem 1rem; min-height: auto;">
+                📞 Call
+              </a>
+              <a href="https://www.instagram.com/beastfitness_arashmood?stkn=MWpzM2dwbDVjNDF0Zw==" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1rem; min-height: auto;">
+                📸 Instagram
+              </a>
+            </div>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">Kazhakkoottam</span>
+            <h3>Kazhakkoottam Branch</h3>
+            <div class="branch-info-list">
+              <div><strong>Location:</strong> Kulangara Temple rd, Kazhakkoottam, Thiruvananthapuram, 695582</div>
+              <div><strong>Opening Hours:</strong> 5:30 AM – 9:30 PM</div>
+              <div><strong>Phone:</strong> +91 62387 76758</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="tel:+916238776758" class="btn btn-outline" style="padding: 0.5rem 1rem; min-height: auto;">
+                📞 Call
+              </a>
+              <a href="https://www.instagram.com/beastfitness_kazhakoottam?stkn=MXE5b2Qyc2hibW1tNg==" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1rem; min-height: auto;">
+                📸 Instagram
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY (HORIZONTAL SIDE SCROLL)
+    ========================== -->
+
+    <section class="section" id="gallery" style="background: var(--bg-soft);">
+
+      <div class="container">
+
+        <div class="section-label">
+          Inside Look
+        </div>
+
+        <h2 class="section-title">
+          Gallery
+        </h2>
+
+        <p class="section-intro">
+          Explore our spacious facilities, modern workout machinery, and active training environments across both branches. Swipe or scroll horizontally to view more.
+        </p>
+
+        <!-- Branch Filter Buttons -->
+        <div class="gallery-filter">
+          <button class="filter-btn active" data-filter="all">All Content</button>
+          <button class="filter-btn" data-filter="kulathoor">Kulathoor Branch</button>
+          <button class="filter-btn" data-filter="kazhakkoottam">Kazhakkoottam Branch</button>
+        </div>
+
+        <!-- Horizontal Scrollable Container -->
+        <div class="gallery-wrapper">
+          <button class="scroll-btn left" id="scrollLeft" aria-label="Scroll left">‹</button>
+          
+          <div class="gallery-slider" id="gallerySlider">
+
+            <!-- Kulathoor Video (Autoplay, Muted, Loop) -->
+            <div class="gallery-item gallery-item-video" data-branch="kulathoor">
+              <video autoplay muted playsinline loop poster="">
+                <source src="Photos_Kulathoor/kulathoorvideo.mp4" type="video/mp4" />
+                <source src="Photos_Kulathoor/kulathoorvideo.webm" type="video/webm" />
+                <source src="Photos_Kulathoor/kulathoorvideo.mov" type="video/quicktime" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-badge">Kulathoor Branch</span>
+                <div class="gallery-overlay-title">Branch Tour Video</div>
+              </div>
+            </div>
+
+            <!-- Kazhakkoottam Video (Autoplay, Muted, Loop) -->
+            <div class="gallery-item gallery-item-video" data-branch="kazhakkoottam">
+              <video autoplay muted playsinline loop poster="">
+                <source src="photos_kazhakuttom/kzkvideo.mp4" type="video/mp4" />
+                <source src="photos_kazhakuttom/kzkvideo.webm" type="video/webm" />
+                <source src="photos_kazhakuttom/kzkvideo.mov" type="video/quicktime" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-badge">Kazhakkoottam Branch</span>
+                <div class="gallery-overlay-title">Branch Tour Video</div>
+              </div>
+            </div>
+
+            <!-- Kazhakkoottam Photos (kzk1 to kzk37) injected dynamically -->
+
+          </div>
+
+          <button class="scroll-btn right" id="scrollRight" aria-label="Scroll right">›</button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Gallery Lightbox Modal -->
+    <div class="gallery-modal" id="galleryModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">✕</button>
+        <img id="modalImg" src="" alt="Enlarged gallery photo" />
+        <div class="modal-caption">
+          <h4 id="modalCaptionTitle"></h4>
+          <p id="modalCaptionLocation"></p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="section" id="services">
+
+      <div class="container">
+
+        <div class="services-header">
+
+          <div>
+
+            <div class="section-label">
+              What We Offer
+            </div>
+
+
+            <h2 class="section-title">
+              Build Your<br />
+              Beast Mode
+            </h2>
+
+          </div>
+
+
+          <p class="section-intro">
+            Whether your goal is building strength, improving fitness,
+            changing your body composition or simply becoming more active,
+            Beast Fitness provides a motivating place to train across both locations.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              🏋
+            </div>
+
+
+            <h3>
+              Strength Training
+            </h3>
+
+
+            <p>
+              Train with a wide range of equipment and structured workouts
+              focused on strength, muscle development and proper technique.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              🔥
+            </div>
+
+
+            <h3>
+              Weight Management
+            </h3>
+
+
+            <p>
+              Work toward your weight-loss or weight-gain goals with
+              consistent training and guidance from experienced trainers.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              ⚡
+            </div>
+
+
+            <h3>
+              Cardio & Fitness
+            </h3>
+
+
+            <p>
+              Improve endurance and overall fitness with cardio-focused
+              workouts alongside your regular strength routine.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              💪
+            </div>
+
+
+            <h3>
+              Personal Training
+            </h3>
+
+
+            <p>
+              Get more focused support with personalized workout guidance,
+              exercise technique and training plans built around your goals.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section about" id="about">
+
+      <div class="container about-grid">
+
+        <div
+          class="about-image"
+          role="img"
+          aria-label="Gym workout area"
+        ></div>
+
+
+        <div class="about-copy">
+
+          <div class="section-label">
+            Why Beast Fitness
+          </div>
+
+
+          <h2 class="section-title">
+            Gyms Built For<br />
+            Real Progress
+          </h2>
+
+
+          <p>
+            Located conveniently in Kulathoor Arashmood and Kazhakkoottam, Beast Fitness is designed
+            for people who want a positive, motivating environment to work out.
+          </p>
+
+
+          <p>
+            Members across both centers appreciate the spacious workout areas, well-maintained
+            equipment, and trainers who are approachable and dedicated to guiding your form.
+          </p>
+
+
+          <ul class="about-points">
+
+            <li>
+              Modern and well-maintained equipment at both facilities
+            </li>
+
+            <li>
+              Experienced and supportive trainers
+            </li>
+
+            <li>
+              Strength, cardio and functional workouts
+            </li>
+
+            <li>
+              Suitable for beginners and regular gym-goers
+            </li>
+
+          </ul>
+
+
+          <a
+            href="tel:+917012272476"
+            class="btn btn-primary"
+          >
+            Talk To The Gym
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TESTIMONIALS
+    ========================== -->
+
+    <section class="section" id="reviews">
+
+      <div class="container">
+
+        <div class="section-label">
+          Member Reviews
+        </div>
+
+
+        <h2 class="section-title">
+          What Members Say
+        </h2>
+
+
+        <p class="section-intro">
+          Feedback from members highlights the supportive trainers,
+          motivating atmosphere and quality of our facilities.
+        </p>
+
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+
+            <p>
+              “The trainers are very supportive and always guide me well.
+              The gym is spacious, neat and clean, which makes workouts
+              very comfortable. The timings are also convenient.”
+            </p>
+
+
+            <div class="reviewer">
+              Anoop C
+
+              <span>
+                Google Review
+              </span>
+            </div>
+
+          </article>
+
+
+          <article class="testimonial">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+
+            <p>
+              “Great gym with well-maintained equipment and plenty of space.
+              The trainers are knowledgeable, friendly and always ready to
+              help with form or routines.”
+            </p>
+
+
+            <div class="reviewer">
+              Jomi F
+
+              <span>
+                Google Review
+              </span>
+            </div>
+
+          </article>
+
+
+          <article class="testimonial">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+
+            <p>
+              “The vibe is super motivating, the trainers actually care
+              about your progress, and the equipment is always in great
+              condition. It feels like a community.”
+            </p>
+
+
+            <div class="reviewer">
+              Ram M
+
+              <span>
+                Google Review
+              </span>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <div class="section-label">
+            Get In Touch
+          </div>
+
+
+          <h2 class="section-title">
+            Ready To<br />
+            Train?
+          </h2>
+
+
+          <p class="section-intro">
+            Have questions about membership, training, or visiting either location?
+            Send an enquiry directly to Beast Fitness on WhatsApp.
+          </p>
+
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                📍
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Kulathoor Arashmood
+                </strong>
+
+
+                <p>
+                  Near Arashmood, Kulathoor,<br />
+                  Thiruvananthapuram, 695011<br />
+                  <strong>Phone:</strong> <a href="tel:+917012272476">+91 70122 72476</a><br />
+                  <strong>Hours:</strong> 5:00 AM – 11:00 AM | 4:00 PM – 10:00 PM
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                📍
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Kazhakkoottam
+                </strong>
+
+
+                <p>
+                  Kulangara Temple rd, Kazhakkoottam,<br />
+                  Thiruvananthapuram, 695582<br />
+                  <strong>Phone:</strong> <a href="tel:+916238776758">+91 62387 76758</a><br />
+                  <strong>Hours:</strong> 5:30 AM – 9:30 PM
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+          <h3>
+            Send An Enquiry
+          </h3>
+
+
+          <form id="contactForm">
+
+            <div class="form-grid">
+
+              <div class="form-group full">
+
+                <label for="branch">
+                  Select Preferred Branch *
+                </label>
+
+
+                <select id="branch" name="branch" required>
+                  <option value="Kulathoor">Kulathoor Arashmood</option>
+                  <option value="Kazhakkoottam">Kazhakkoottam</option>
+                  <option value="General Enquiry">Either / General Enquiry</option>
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="name">
+                  Your Name *
+                </label>
+
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone Number *
+                </label>
+
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone"
+                  autocomplete="tel"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="email">
+                  Email
+                </label>
+
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                />
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="message">
+                  Message *
+                </label>
+
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Example: I would like to know the monthly membership fee."
+                  required
+                ></textarea>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary form-submit"
+            >
+              💬 Send On WhatsApp
+            </button>
+
+
+            <p class="form-note">
+              Your enquiry will open in WhatsApp with the details
+              automatically filled in.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <a href="#home" class="logo-container">
+          <img src="BeastLogo.jpeg" alt="Beast Fitness Logo" class="gym-logo" />
+          <img src="beastfitness.png" alt="BEAST FITNESS" class="beast-fitness-img" />
+        </a>
+
+
+        <p class="footer-copy">
+          © <span id="year"></span>
+          Beast Fitness. All rights reserved.
+        </p>
+
+      </div>
+
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#branches">Locations</a>
+        </li>
+
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#reviews">Reviews</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+
+      <div class="socials">
+
+        <a
+          class="social"
+          href="https://www.instagram.com/beastfitness_arashmood?stkn=MWpzM2dwbDVjNDF0Zw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram - Kulathoor Arashmood"
+          title="Kulathoor Instagram"
+        >
+          IG 1
+        </a>
+
+        <a
+          class="social"
+          href="https://www.instagram.com/beastfitness_kazhakoottam?stkn=MXE5b2Qyc2hibW1tNg=="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram - Kazhakkoottam"
+          title="Kazhakkoottam Instagram"
+        >
+          IG 2
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* =========================================
+       MOBILE NAVIGATION
+    ========================================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen =
+        navLinks.classList.toggle("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+      menuToggle.textContent =
+        isOpen ? "✕" : "☰";
+
+    });
+
+
+    /* Close mobile menu after selecting a link */
+
+    document
+      .querySelectorAll("#navLinks a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("active");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.textContent = "☰";
+
+        });
+
+      });
+
+
+    /* =========================================
+       DYNAMIC GALLERY GENERATION & SCROLL
+    ========================================= */
+
+    const gallerySlider = document.getElementById("gallerySlider");
+    const imageExtensions = ["jpg", "jpeg", "png", "webp"];
+
+    // Dynamically inject Kazhakkoottam Photos (kzk1 to kzk37)
+    for (let i = 1; i <= 37; i++) {
+      const item = document.createElement("div");
+      item.className = "gallery-item";
+      item.setAttribute("data-branch", "kazhakkoottam");
+      item.setAttribute("data-location", "Kazhakkoottam Branch");
+
+      const img = document.createElement("img");
+      img.src = `photos_kazhakuttom/kzk${i}.jpg`;
+      img.alt = `Kazhakkoottam Branch Gym ${i}`;
+
+      let extIndex = 0;
+      img.onerror = function () {
+        extIndex++;
+        if (extIndex < imageExtensions.length) {
+          this.src = `photos_kazhakuttom/kzk${i}.${imageExtensions[extIndex]}`;
+        }
+      };
+
+      const overlay = document.createElement("div");
+      overlay.className = "gallery-overlay";
+      overlay.innerHTML = `
+        <span class="gallery-overlay-badge">Kazhakkoottam Branch</span>
+        
+      `;
+
+      item.appendChild(img);
+      item.appendChild(overlay);
+      gallerySlider.appendChild(item);
+    }
+
+    /* Horizontal Scroll Navigation Controls */
+    const scrollLeftBtn = document.getElementById("scrollLeft");
+    const scrollRightBtn = document.getElementById("scrollRight");
+
+    scrollLeftBtn.addEventListener("click", () => {
+      gallerySlider.scrollBy({ left: -340, behavior: "smooth" });
+    });
+
+    scrollRightBtn.addEventListener("click", () => {
+      gallerySlider.scrollBy({ left: 340, behavior: "smooth" });
+    });
+
+    /* Filter Logic */
+    const filterBtns = document.querySelectorAll(".filter-btn");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filterValue = btn.getAttribute("data-filter");
+        const allItems = document.querySelectorAll("#gallerySlider .gallery-item");
+
+        allItems.forEach(item => {
+          if (filterValue === "all" || item.getAttribute("data-branch") === filterValue) {
+            item.style.display = "flex";
+          } else {
+            item.style.display = "none";
+          }
+        });
+        
+        // Reset scroll position to start after filtering
+        gallerySlider.scrollLeft = 0;
+      });
+    });
+
+    /* Lightbox Modal */
+    const galleryModal = document.getElementById("galleryModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalCaptionTitle = document.getElementById("modalCaptionTitle");
+    const modalCaptionLocation = document.getElementById("modalCaptionLocation");
+    const modalClose = document.getElementById("modalClose");
+
+    gallerySlider.addEventListener("click", (e) => {
+      const item = e.target.closest(".gallery-item");
+      if (item && !item.classList.contains("gallery-item-video")) {
+        const img = item.querySelector("img");
+        if (img) {
+          modalImg.src = img.src;
+          modalCaptionTitle.textContent = item.getAttribute("data-caption") || "Beast Fitness";
+          modalCaptionLocation.textContent = item.getAttribute("data-location") || "";
+          galleryModal.classList.add("active");
+        }
+      }
+    });
+
+    modalClose.addEventListener("click", () => {
+      galleryModal.classList.remove("active");
+    });
+
+    galleryModal.addEventListener("click", (e) => {
+      if (e.target === galleryModal) {
+        galleryModal.classList.remove("active");
+      }
+    });
+
+
+    /* =========================================
+       WHATSAPP ENQUIRY FORM
+    ========================================= */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+
+    const gymWhatsAppNumbers = {
+      "Kulathoor": "917012272476",
+      "Kazhakkoottam": "916238776758",
+      "General Enquiry": "917012272476"
+    };
+
+
+    contactForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        const branch =
+          document
+            .getElementById("branch")
+            .value;
+
+        const name =
+          document
+            .getElementById("name")
+            .value
+            .trim();
+
+
+        const phone =
+          document
+            .getElementById("phone")
+            .value
+            .trim();
+
+
+        const email =
+          document
+            .getElementById("email")
+            .value
+            .trim();
+
+
+        const message =
+          document
+            .getElementById("message")
+            .value
+            .trim();
+
+
+        if (!name || !phone || !message) {
+
+          alert(
+            "Please enter your name, phone number and message."
+          );
+
+          return;
+
+        }
+
+        const targetWhatsApp = gymWhatsAppNumbers[branch] || "917012272476";
+
+
+        const whatsappMessage =
+`🏋 NEW BEAST FITNESS ENQUIRY
+
+📍 Branch: ${branch}
+
+👤 Name: ${name}
+
+📞 Phone: ${phone}
+
+📧 Email: ${email || "Not provided"}
+
+💬 Enquiry:
+${message}
+
+--------------------------------
+Sent via Beast Fitness Website`;
+
+
+        const encodedMessage =
+          encodeURIComponent(
+            whatsappMessage
+          );
+
+
+        const whatsappURL =
+          `https://wa.me/${targetWhatsApp}?text=${encodedMessage}`;
+
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+
+        contactForm.reset();
+
+      }
+    );
+
+
+    /* =========================================
+       CURRENT YEAR
+    ========================================= */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
